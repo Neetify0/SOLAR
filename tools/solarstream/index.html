@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOLAR</title>
+    <link href="https://fonts.googleapis.com/css?family=Lexend" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="icon" type="image/x-icon" href="/logo/SOLARCIRCLE.ico">
+</head>
+<body>
+    <a href="/tools/" class="back-button">
+        <button>BACK</button>
+    </a>
+    <div class="container">
+        <h1 class="title">SOLARSTREAM</h1>
+        <p class="description">Credits to <a href="">WORK IN PROGRESS</a> for a safe, ad-free streaming embed.</p>
+        <div>
+            <label for="type">Select Type:</label>
+            <select id="type">
+                <option value="movie">Movie</option>
+                <option value="tv">TV Show</option>
+            </select>
+        </div>
+        <div>
+            <label for="tmdb_id">TMDb ID:</label>
+            <input type="text" id="tmdb_id" placeholder="Enter TMDb ID">
+        </div>
+        <div id="tv-options" style="display: none;">
+            <label for="season">Season:</label>
+            <input type="number" id="season" placeholder="Season Number">
+            <label for="episode">Episode:</label>
+            <input type="number" id="episode" placeholder="Episode Number">
+        </div>
+        <button onclick="generateIframe()">Stream</button>
+        <div id="iframe-container"></div>
+    </div>
+    <script>
+        document.getElementById("type").addEventListener("change", function() {
+            document.getElementById("tv-options").style.display = this.value === "tv" ? "block" : "none";
+        });
+
+        function generateIframe() {
+            const type = document.getElementById("type").value;
+            const tmdbId = document.getElementById("tmdb_id").value;
+            let iframeSrc = "";
+            
+            if (type === "movie") {
+                iframeSrc = `https:// /embed/movie/${tmdbId}`;
+            } else {
+                const season = document.getElementById("season").value;
+                const episode = document.getElementById("episode").value;
+                iframeSrc = `https:// /embed/tv/${tmdbId}/${season}/${episode}`;
+            }
+
+            document.getElementById("iframe-container").innerHTML = `<iframe src="${iframeSrc}" width="800" height="450" allowfullscreen></iframe>`;
+        }
+    </script>
+</body>
+</html>
