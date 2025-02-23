@@ -16,20 +16,16 @@
         <h1 class="title">SOLARSTREAM</h1>
         <p class="description">Credits to <a href="">WORK IN PROGRESS</a> for a safe, ad-free streaming embed.</p>
         <div>
-            <label for="type">Select Type:</label>
             <select id="type">
                 <option value="movie">Movie</option>
                 <option value="tv">TV Show</option>
             </select>
         </div>
         <div>
-            <label for="tmdb_id">TMDb ID:</label>
             <input type="text" id="tmdb_id" placeholder="Enter TMDb ID">
         </div>
         <div id="tv-options" style="display: none;">
-            <label for="season">Season:</label>
-            <input type="number" id="season" placeholder="Season Number">
-            <label for="episode">Episode:</label>
+            <input type="number" id="season" style="margin-right: 18px;" placeholder="Season Number">
             <input type="number" id="episode" placeholder="Episode Number">
         </div>
         <button onclick="generateIframe()">Stream</button>
