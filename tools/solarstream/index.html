@@ -14,7 +14,7 @@
     </a>
     <div class="container">
         <h1 class="title">SOLARSTREAM</h1>
-        <p class="description">Credits to <a href="">WORK IN PROGRESS</a> for a safe, ad-free streaming embed.</p>
+        <p class="description">This code uses a third party streaming api to stream movies and other content.</p>
         <div>
             <select id="type">
                 <option value="movie">Movie</option>
@@ -22,7 +22,7 @@
             </select>
         </div>
         <div>
-            <input type="text" id="tmdb_id" placeholder="Enter TMDb ID">
+            <input type="text" id="mdb_id" placeholder="Enter IMDb or TMDb ID">
         </div>
         <div id="tv-options" style="display: none;">
             <input type="number" id="season" style="margin-right: 18px;" placeholder="Season Number">
@@ -38,15 +38,15 @@
 
         function generateIframe() {
             const type = document.getElementById("type").value;
-            const tmdbId = document.getElementById("tmdb_id").value;
+            const tmdbId = document.getElementById("mdb_id").value;
             let iframeSrc = "";
             
             if (type === "movie") {
-                iframeSrc = `https:// /embed/movie/${tmdbId}`;
+                iframeSrc = `https://6x3d4pm9r7k2v8h1q5.uira.live/embed/movie/${mdbId}`;
             } else {
                 const season = document.getElementById("season").value;
                 const episode = document.getElementById("episode").value;
-                iframeSrc = `https:// /embed/tv/${tmdbId}/${season}/${episode}`;
+                iframeSrc = `https://6x3d4pm9r7k2v8h1q5.uira.live/embed/tv/${mdbId}/${season}/${episode}`;
             }
 
             document.getElementById("iframe-container").innerHTML = `<iframe src="${iframeSrc}" width="800" height="450" allowfullscreen></iframe>`;
