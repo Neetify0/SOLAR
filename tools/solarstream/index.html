@@ -14,15 +14,15 @@
     </a>
     <div class="container">
         <h1 class="title">SOLARSTREAM</h1>
-        <p class="description">SOLAR uses a third party streaming API to stream content. Use <a href="https://www.imdb.com/" target="_blank">IMDb</a> or <a href="https://www.themoviedb.org/" target="_blank">TMDb</a> to get the ID for content to stream.</p>
+        <p class="description">SOLAR uses a third party streaming API to stream content. Use <a href="https://www.themoviedb.org/" target="_blank">TMDb</a> to get the ID for what content you want to stream. Most content is listed correctly and the API will usually work.</p>
         <div>
             <select id="type">
                 <option value="movie">Movie</option>
-                <option value="tv">TV Show</option>
+                <option value="tv">TV Show/Anime</option>
             </select>
         </div>
         <div>
-            <input type="text" id="mdb_id" placeholder="Enter IMDb or TMDb ID">
+            <input type="text" id="tmdb_id" placeholder="Enter TMDb ID">
         </div>
         <div id="tv-options" style="display: none;">
             <input type="number" id="season" style="margin-right: 18px;" placeholder="Season Number">
@@ -38,15 +38,15 @@
 
         function generateIframe() {
             const type = document.getElementById("type").value;
-            const mdbId = document.getElementById("mdb_id").value;
+            const tmdbId = document.getElementById("tmdb_id").value;
             let iframeSrc = "";
             
             if (type === "movie") {
-                iframeSrc = `https://6x3d4pm9r7k2v8h1q5.uira.live/embed/movie/${mdbId}`;
+                iframeSrc = `https://6x3d4pm9r7k2v8h1q5.uira.live/embed/movie/${tmdbId}`;
             } else {
                 const season = document.getElementById("season").value;
                 const episode = document.getElementById("episode").value;
-                iframeSrc = `https://6x3d4pm9r7k2v8h1q5.uira.live/embed/tv/${mdbId}/${season}/${episode}`;
+                iframeSrc = `https://6x3d4pm9r7k2v8h1q5.uira.live/embed/tvshow/${tmdbId}/${season}/${episode}`;
             }
 
             document.getElementById("iframe-container").innerHTML = `<iframe src="${iframeSrc}" width="800" height="450" allowfullscreen></iframe>`;
