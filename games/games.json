@@ -1,7 +1,247 @@
 [
     {
+        "title": "2048",
+        "image": "/images/2048.png",
+        "file": "/gamesfiles/2048/"
+    },
+    {
+        "title": "Backrooms",
+        "image": "/images/backrooms.png",
+        "file": "/gamesfiles/backrooms/"
+    },
+    {
+        "title": "Bad Ice Cream",
+        "image": "/images/bad-ice-cream.png",
+        "file": "/gamesfiles/bad-ice-cream/"
+    },
+    {
+        "title": "Bad Ice Cream 2",
+        "image": "/images/bad-ice-cream-2.png",
+        "file": "/gamesfiles/bad-ice-cream-2/"
+    },
+    {
+        "title": "Bad Ice Cream 3",
+        "image": "/images/bad-ice-cream-3.png",
+        "file": "/gamesfiles/bad-ice-cream-3/"
+    },
+    {
+        "title": "Baldi's Basics",
+        "image": "/images/baldis-basics.png",
+        "file": "/gamesfiles/baldis-basics/"
+    },
+    {
+        "title": "Bloons TD",
+        "image": "/images/bloonstd.png",
+        "file": "/gamesfiles/bloonstd/"
+    },
+    {
+        "title": "Bloons TD 2",
+        "image": "/images/bloonstd2.png",
+        "file": "/gamesfiles/bloonstd2/"
+    },
+    {
+        "title": "Bloons TD 4",
+        "image": "/images/bloonstd4.png",
+        "file": "/gamesfiles/bloonstd4/"
+    },
+    {
+        "title": "Cookie Clicker",
+        "image": "/images/cookie_clicker.png",
+        "file": "/gamesfiles/cookie_clicker/"
+    },
+    {
+        "title": "Cut the Rope",
+        "image": "/images/cut-the-rope.png",
+        "file": "/gamesfiles/cut-the-rope/"
+    },
+    {
+        "title": "Doodle Jump",
+        "image": "/images/doodle-jump.png",
+        "file": "/gamesfiles/doodle-jump/"
+    },
+    {
+        "title": "Drive Mad",
+        "image": "/images/drive_mad.png",
+        "file": "/gamesfiles/drive_mad/"
+    },
+    {
+        "title": "Duck Life 1",
+        "image": "/images/ducklife1.png",
+        "file": "/gamesfiles/ducklife1/"
+    },
+    {
+        "title": "Duck Life 2",
+        "image": "/images/ducklife2.png",
+        "file": "/gamesfiles/ducklife2/"
+    },
+    {
+        "title": "Duck Life 3",
+        "image": "/images/ducklife3.png",
+        "file": "/gamesfiles/ducklife3/"
+    },
+    {
+        "title": "Duck Life 4",
+        "image": "/images/ducklife4.png",
+        "file": "/gamesfiles/ducklife4/"
+    },
+    {
+        "title": "Flappy Bird",
+        "image": "/images/flappy-bird.png",
+        "file": "/gamesfiles/flappy-bird/"
+    },
+    {
+        "title": "Funny Shooter",
+        "image": "/images/funnyshooter.png",
+        "file": "/gamesfiles/funnyshooter/"
+    },
+    {
         "title": "Gladihoppers",
         "image": "/images/gladihoppers.png",
         "file": "/gamesfiles/gladihoppers/"
+    },
+    {
+        "title": "Idle Breakout",
+        "image": "/images/idlebreakout.png",
+        "file": "/gamesfiles/idlebreakout/"
+    },
+    {
+        "title": "Impossible Quiz",
+        "image": "/images/impossiblequiz.png",
+        "file": "/gamesfiles/impossiblequiz/"
+    },
+    {
+        "title": "Jetpack Joyride",
+        "image": "/images/jetpack-joyride.png",
+        "file": "/gamesfiles/jetpack-joyride/"
+    },
+    {
+        "title": "Just One Boss",
+        "image": "/images/just-one-boss.png",
+        "file": "/gamesfiles/just-one-boss/"
+    },
+    {
+        "title": "Learn to Fly",
+        "image": "/images/learntofly.png",
+        "file": "/gamesfiles/learntofly/"
+    },
+    {
+        "title": "Learn to Fly 2",
+        "image": "/images/learntofly2.png",
+        "file": "/gamesfiles/learntofly2/"
+    },
+    {
+        "title": "Minecraft",
+        "image": "/images/minecraft.png",
+        "file": "/gamesfiles/minecraft/"
+    },
+    {
+        "title": "Moto X3M",
+        "image": "/images/motox3m.png",
+        "file": "/gamesfiles/motox3m/"
+    },
+    {
+        "title": "Moto X3M 2",
+        "image": "/images/motox3m2.png",
+        "file": "/gamesfiles/motox3m2/"
+    },
+    {
+        "title": "Moto X3M Pool",
+        "image": "/images/motox3m-pool.png",
+        "file": "/gamesfiles/motox3m-pool/"
+    },
+    {
+        "title": "Moto X3M Spooky",
+        "image": "/images/moto-spook.png",
+        "file": "/gamesfiles/moto-spook/"
+    },
+    {
+        "title": "Moto X3M Winter",
+        "image": "/images/motox3m-winter.png",
+        "file": "/gamesfiles/motox3m-winter/"
+    },
+    {
+        "title": "Paper.io",
+        "image": "/images/paper-io.png",
+        "file": "/gamesfiles/paper-io/"
+    },
+    {
+        "title": "Pokemon Fire Red",
+        "image": "/images/pokemon_fire_red.png",
+        "file": "/gamesfiles/pokemon_fire_red/"
+    },
+    {
+        "title": "Pokemon Radical Red",
+        "image": "/images/pokemon_radical_red.png",
+        "file": "/gamesfiles/pokemon_radical_red/"
+    },
+    {
+        "title": "Retro Bowl",
+        "image": "/images/retrobowl.png",
+        "file": "/gamesfiles/retrobowl/"
+    },
+    {
+        "title": "Rooftop Snipers",
+        "image": "/images/Rooftop-Snipers.png",
+        "file": "/gamesfiles/Rooftop-Snipers/"
+    },
+    {
+        "title": "Run 3",
+        "image": "/images/run3.png",
+        "file": "/gamesfiles/run3/"
+    },
+    {
+        "title": "Slope",
+        "image": "/images/slope.png",
+        "file": "/gamesfiles/slope/"
+    },
+    {
+        "title": "Super Mario 64",
+        "image": "/images/super_mario_64.png",
+        "file": "/gamesfiles/super_mario_64/"
+    },
+    {
+        "title": "Superhot",
+        "image": "/images/superhot.png",
+        "file": "/gamesfiles/superhot/"
+    },
+    {
+        "title": "Temple Run",
+        "image": "/images/templerun.png",
+        "file": "/gamesfiles/templerun/"
+    },
+    {
+        "title": "Tetris",
+        "image": "/images/tetris.png",
+        "file": "/gamesfiles/tetris/"
+    },
+    {
+        "title": "Vex 3",
+        "image": "/images/vex3.png",
+        "file": "/gamesfiles/vex3/"
+    },
+    {
+        "title": "Vex 4",
+        "image": "/images/vex4.png",
+        "file": "/gamesfiles/vex4/"
+    },
+    {
+        "title": "Vex 5",
+        "image": "/images/vex5.png",
+        "file": "/gamesfiles/vex5/"
+    },
+    {
+        "title": "Vex 6",
+        "image": "/images/vex6.png",
+        "file": "/gamesfiles/vex6/"
+    },
+    {
+        "title": "Vex 7",
+        "image": "/images/vex7.png",
+        "file": "/gamesfiles/vex7/"
+    },
+    {
+        "title": "Wordle",
+        "image": "/images/wordle.png",
+        "file": "/gamesfiles/wordle/"
     }
 ]
