@@ -152,22 +152,12 @@ a {
     max-width: 400px;
 }
 
-#iframe-container {
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: auto;
-    overflow: hidden;
-}
-
 iframe {
     border: 2px solid #353535;
     border-radius: 10px;
     box-shadow: 0px 0px 15px rgba(53, 53, 53, 0.5);
-    width: 2000px;
-    height: 750px;
+    width: 1500px;
+    height: 700px;
 }
 
 /* e04e4e */

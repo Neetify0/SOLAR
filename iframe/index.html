@@ -13,7 +13,25 @@
         <button>BACK</button>
     </a>
     <div class="container">
-        
+        <h1 class="title" id="gameTitle">SOLAR</h1>
+        <iframe id="gameFrame" src=""></iframe>
     </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            let gamePath = urlParams.get("game");
+            gamePath = gamePath.replace(/^\/gamesfiles\//, '').replace(/\/$/, '');
+            document.getElementById("gameTitle").innerText = gamePath.charAt(0).toUpperCase() + gamePath.slice(1);
+
+            if (gamePath) {
+                if (!gamePath.startsWith("/gamesfiles/")) {
+                    gamePath = "/gamesfiles/" + gamePath;
+                }
+                document.getElementById("gameFrame").src = decodeURIComponent(gamePath);
+            } else {
+                document.getElementById("gameFrame").outerHTML = "<p>Game not found.</p>";
+            }
+        });
+    </script>
 </body>
 </html>
