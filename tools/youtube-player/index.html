@@ -9,17 +9,25 @@
     <link rel="icon" type="image/x-icon" href="/logo/YOUTUBE.ico">
     <script rel="script" src="/redirect.js"></script>
     <script>
+        let player;
+        let videoId = null;
+        let lastSavedTime = 0;
+
         function loadVideo() {
             let input = document.getElementById("videoInput").value.trim();
-            let videoId = extractVideoId(input);
+            videoId = extractVideoId(input);
             let iframe = document.getElementById("videoFrame");
 
             if (videoId) {
-                let videoUrl = "https://www.youtube-nocookie.com/embed/" + videoId;
+                let savedTime = localStorage.getItem("videoTime_" + videoId) || 0;
+                let videoUrl = "https://www.youtube-nocookie.com/embed/" + videoId + "?enablejsapi=1&start=" + savedTime;
+
                 iframe.src = videoUrl;
                 iframe.style.display = "block";
                 localStorage.setItem("lastVideo", videoId);
                 localStorage.setItem("lastInput", input);
+
+                setTimeout(setupPlayer, 1000);
             } else {
                 alert("Invalid YouTube URL or ID");
             }
@@ -40,8 +48,38 @@
             }
         }
 
+        function setupPlayer() {
+            if (player) return;
+
+            player = new YT.Player('videoFrame', {
+                events: {
+                    'onStateChange': trackVideoTime
+                }
+            });
+        }
+
+        function trackVideoTime(event) {
+            if (event.data == YT.PlayerState.PLAYING || event.data == YT.PlayerState.PAUSED) {
+                requestAnimationFrame(saveVideoTime);
+            }
+        }
+
+        function saveVideoTime() {
+            if (player && typeof player.getCurrentTime === "function") {
+                let currentTime = Math.floor(player.getCurrentTime());
+                if (currentTime !== lastSavedTime) {
+                    localStorage.setItem("videoTime_" + videoId, currentTime);
+                    lastSavedTime = currentTime;
+                }
+                if (player.getPlayerState() == YT.PlayerState.PLAYING) {
+                    requestAnimationFrame(saveVideoTime);
+                }
+            }
+        }
+
         window.onload = loadSavedInput;
     </script>
+    <script src="https://www.youtube.com/iframe_api"></script>
     <style>
         #videoFrame {
             display: none;
@@ -54,6 +92,7 @@
     </a>
     <div class="container">
         <h1 class="title">YOUTUBE PLAYER</h1>
+        <p class="description">Watch YouTube videos with this YouTube player! Last watched video and time is saved to return to later.</p>
         <input type="text" id="videoInput" placeholder="YouTube URL or ID">
         <button onclick="loadVideo()">WATCH</button>
         <iframe id="videoFrame" allowfullscreen></iframe>
