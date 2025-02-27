@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YOUTUBE PLAYER</title>
+    <link href="https://fonts.googleapis.com/css?family=Lexend" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="icon" type="image/x-icon" href="/logo/YOUTUBE.ico">
+    <script>
+        function loadVideo() {
+            let input = document.getElementById("videoInput").value.trim();
+            let videoId = extractVideoId(input);
+            let iframe = document.getElementById("videoFrame");
+
+            if (videoId) {
+                let videoUrl = "https://www.youtube-nocookie.com/embed/" + videoId;
+                iframe.src = videoUrl;
+                iframe.style.display = "block";
+                localStorage.setItem("lastVideo", videoId);
+                localStorage.setItem("lastInput", input);
+            } else {
+                alert("Invalid YouTube URL or ID");
+            }
+        }
+
+        function extractVideoId(input) {
+            if (/^[a-zA-Z0-9_-]{11}$/.test(input)) {
+                return input;
+            }
+            let match = input.match(/(?:youtu\.be\/|youtube\.com\/(?:.*v=|embed\/|v\/|.*[?&]v=))([^"&?\/\s]{11})/);
+            return match ? match[1] : null;
+        }
+
+        function loadSavedInput() {
+            let savedInput = localStorage.getItem("lastInput");
+            if (savedInput) {
+                document.getElementById("videoInput").value = savedInput;
+            }
+        }
+
+        window.onload = loadSavedInput;
+    </script>
+    <style>
+        #videoFrame {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <a href="/tools/" class="back-button">
+        <button>BACK</button>
+    </a>
+    <div class="container">
+        <h1 class="title">YOUTUBE PLAYER</h1>
+        <input type="text" id="videoInput" placeholder="YouTube URL or ID">
+        <button onclick="loadVideo()">WATCH</button>
+        <iframe id="videoFrame" allowfullscreen></iframe>
+    </div>
+</body>
+</html>
