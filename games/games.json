@@ -4,6 +4,7 @@
     { "title": "Bad Ice Cream", "image": "/images/bad-ice-cream.png", "file": "/gamesfiles/bad-ice-cream/" },
     { "title": "Bad Ice Cream 2", "image": "/images/bad-ice-cream-2.png", "file": "/gamesfiles/bad-ice-cream-2/" },
     { "title": "Bad Ice Cream 3", "image": "/images/bad-ice-cream-3.png", "file": "/gamesfiles/bad-ice-cream-3/" },
+    { "title": "Bad Time Simulator", "image": "/images/sans.png", "file": "/gamesfiles/bad-time-simulator/" },
     { "title": "Baldi's Basics", "image": "/images/baldis-basics.png", "file": "/gamesfiles/baldis-basics/" },
     { "title": "Bloons TD", "image": "/images/bloonstd.png", "file": "/gamesfiles/bloons-td/" },
     { "title": "Bloons TD 2", "image": "/images/bloonstd2.png", "file": "/gamesfiles/bloons-td-2/" },
