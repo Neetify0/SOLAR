@@ -22,9 +22,11 @@
             const urlParams = new URLSearchParams(window.location.search);
             let gamePath = urlParams.get("game");
             gamePath = gamePath.replace(/^\/gamesfiles\//, '').replace(/\/$/, '');
-            document.getElementById("gameTitle").innerText = gamePath.charAt(0).toUpperCase() + gamePath.slice(1);
 
             if (gamePath) {
+                const formattedTitle = gamePath.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+                document.getElementById("gameTitle").innerText = formattedTitle;
+
                 if (!gamePath.startsWith("/gamesfiles/")) {
                     gamePath = "/gamesfiles/" + gamePath;
                 }

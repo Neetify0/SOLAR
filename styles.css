@@ -32,7 +32,7 @@ html, body {
 
 .logo {
     width: 200px;
-    margin-bottom: 20px;
+    margin-bottom: -20px;
 }
 
 h1 {
@@ -156,9 +156,10 @@ iframe {
     border: 2px solid #353535;
     border-radius: 10px;
     box-shadow: 0px 0px 15px rgba(53, 53, 53, 0.5);
-    width: 2000px;
-    height: 750px;
+    width: 1500px;
+    height: 700px;
     max-width: 100%;
+    margin-top: 25px;
 }
 
 /* e04e4e */
