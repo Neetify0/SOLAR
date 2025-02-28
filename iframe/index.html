@@ -15,6 +15,9 @@
     </a>
     <div class="container">
         <h1 class="title" id="gameTitle"></h1>
+        <button class="fullscreen-button" onclick="toggleFullscreen()">
+            <img src="/logo/fullscreen.png" alt="Fullscreen">
+        </button>
         <iframe id="gameFrame" src="" allowfullscreen></iframe>
     </div>
     <script>
@@ -35,6 +38,19 @@
                 document.getElementById("gameFrame").outerHTML = "<p>Game not found.</p>";
             }
         });
+
+        function toggleFullscreen() {
+            const iframe = document.getElementById("gameFrame");
+            if (iframe.requestFullscreen) {
+                iframe.requestFullscreen();
+            } else if (iframe.mozRequestFullScreen) { // Firefox
+                iframe.mozRequestFullScreen();
+            } else if (iframe.webkitRequestFullscreen) { // Chrome, Safari and Opera
+                iframe.webkitRequestFullscreen();
+            } else if (iframe.msRequestFullscreen) { // IE/Edge
+                iframe.msRequestFullscreen();
+            }
+        }
     </script>
 </body>
 </html>
