@@ -59,6 +59,7 @@
     { "title": "Superhot", "image": "/images/superhot.png", "file": "/gamesfiles/superhot/" },
     { "title": "Temple Run 2", "image": "/images/templerun.png", "file": "/gamesfiles/temple-run-2/" },
     { "title": "Tetris", "image": "/images/tetris.png", "file": "/gamesfiles/tetris/" },
+    { "title": "Tiny Fishing", "image": "/images/tiny-fishing.png", "file": "/gamesfiles/tinyfishing/" },
     { "title": "Vex 3", "image": "/images/vex3.png", "file": "/gamesfiles/vex-3/" },
     { "title": "Vex 4", "image": "/images/vex4.png", "file": "/gamesfiles/vex-4/" },
     { "title": "Vex 5", "image": "/images/vex5.png", "file": "/gamesfiles/vex-5/" },

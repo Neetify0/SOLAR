@@ -27,13 +27,21 @@
             gamePath = gamePath.replace(/^\/gamesfiles\//, '').replace(/\/$/, '');
 
             if (gamePath) {
-                const formattedTitle = gamePath.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
-                document.getElementById("gameTitle").innerText = formattedTitle;
-
-                if (!gamePath.startsWith("/gamesfiles/")) {
-                    gamePath = "/gamesfiles/" + gamePath;
-                }
-                document.getElementById("gameFrame").src = decodeURIComponent(gamePath);
+                fetch('/games/games.json')
+                    .then(response => response.json())
+                    .then(games => {
+                        const game = games.find(g => g.file.replace(/^\/gamesfiles\//, '').replace(/\/$/, '') === gamePath);
+                        if (game) {
+                            document.getElementById("gameTitle").innerText = game.title;
+                            document.getElementById("gameFrame").src = decodeURIComponent(game.file);
+                        } else {
+                            document.getElementById("gameFrame").outerHTML = "<p>Game not found.</p>";
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error fetching games.json:', error);
+                        document.getElementById("gameFrame").outerHTML = "<p>Game not found.</p>";
+                    });
             } else {
                 document.getElementById("gameFrame").outerHTML = "<p>Game not found.</p>";
             }
